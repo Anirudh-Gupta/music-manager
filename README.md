@@ -1,10 +1,10 @@
 # Assumptions!
 
-   - An API hit with a url like <host>:<port>/../../../pink-floyd, should return the band information as well as the albums they released.. Retrieval of band by its name('-' separated, lower case) instead of Id.
-   - A url hit to <host>:<port>/../../../dark-side-of-the-moon, shall return information of the album. Again, retrieval by name('-' separated, lower case).
+   - An API hit with a url like <host>:<port>/../../../pink-floyd, should return the band information as well as the albums they released.. Retrieval of band by its name ('-' separated, lower case) instead of Id.
+   - A url hit to <host>:<port>/../../../dark-side-of-the-moon, shall return information of the album. Again, retrieval by name ('-' separated, lower case).
    - Editing a band or an album uses the same params as used for creating it. Assumed that the same frontend form will be used for it and hence will get all the params. For example: editing just the website of a band requires the new website param as well as the old params as part of the request.
    - Edit and Delete Requests doesn't return anything in response with status as 204. Could have returned 200 with Entity as the response.
-   - Followed Rest Routing Convention. Have kept Bands and Albums as nested resource. Refer to the attached Postman Collection Link.
+   - Followed Rest Routing Convention. Have kept Bands and Albums as nested resource. Refer to the Postman Collection Link given in the end.
 
 
 Band Attributes :
