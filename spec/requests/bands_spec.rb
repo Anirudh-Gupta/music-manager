@@ -1,6 +1,5 @@
 # spec/requests/todos_spec.rb
 require 'rails_helper'
-require 'pry'
 RSpec.describe 'Bands API', type: :request do
   # initialize test data
   let!(:bands) { create_list(:band, 10) }

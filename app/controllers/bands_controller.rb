@@ -1,4 +1,3 @@
-require 'pry'
 class BandsController < ApplicationController
   before_action :set_band, only: [:show, :update, :destroy]
 
