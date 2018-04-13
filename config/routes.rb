@@ -3,4 +3,7 @@ Rails.application.routes.draw do
   resources :bands do
     resources :albums
   end
+
+  get '/repo/changed_files', to: 'repo#changed_files'
+
 end
