@@ -6,8 +6,6 @@ jobs:
       - image: circleci/ruby:2.4-node
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_ROOT_PASSWORD: ''
-          MYSQL_DATABASE: music_manager_test
       - image: circleci/mysql:5.7.20
         environment:
         MYSQL_ROOT_PASSWORD: ''
@@ -35,6 +33,11 @@ jobs:
           key: rails-demo-bundle-v2-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
+
+      - run:
+          name: Wait for DB
+                      # preinstalled in circleci/* docker image
+          command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
 
       - run:
           name: Database setup
