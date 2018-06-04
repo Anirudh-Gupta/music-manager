@@ -11,8 +11,8 @@ default: &default
   pool: 5
   timeout: 5000
   username: root
-  password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
-
+  password:
+  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
