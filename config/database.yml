@@ -10,8 +10,8 @@ default: &default
   reconnect: true
   pool: 5
   timeout: 5000
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['MYSQL_ROOT_PASSWORD'] %>
 
 
 development:
