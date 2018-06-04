@@ -10,6 +10,7 @@ jobs:
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
           MYSQL_USER: root
+          MYSQL_HOST: 127.0.0.1
     steps:
       - checkout
 
