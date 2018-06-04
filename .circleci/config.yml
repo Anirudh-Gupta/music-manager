@@ -5,20 +5,9 @@ jobs:
     docker:
       - image: circleci/ruby:2.4-node
         environment:
-          BUNDLE_JOBS: 3
-          BUNDLE_RETRY: 3
-          BUNDLE_PATH: vendor/bundle
-          MYSQL_DB: music_manager_test
-          MYSQL_HOST: 127.0.0.1
-          MYSQL_USER: root
-          MYSQL_ALLOW_EMPTY_PASSWORD: true
-          MYSQL_PASSWORD:
-          RAILS_ENV: test
-      - image: mysql:5.7
-          command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_bin --innodb-large-prefix=true --innodb-file-format=Barracuda
-          environment:
-            MYSQL_USER: root
-            MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_DATABASE: music_manager_test
     steps:
       - checkout
 
