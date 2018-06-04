@@ -10,7 +10,6 @@
 /tmp/
 /test/*
 .idea/*
-Gemfile.lock
 db/schema.rb
 log/*
 # Ignore the default SQLite database.
